@@ -26,17 +26,7 @@ public class P06_SeleniumEasy_CheckboxVerification_2 {
 
         Thread.sleep(2000);
         CheckAllButton.click();
-        Boolean checked=true;
-        List<WebElement> checkAllButton = driver.findElements(By.xpath("(//div[@class='panel-body'])[3]//div[@class='checkbox']"));
-        for (WebElement each:checkAllButton){
-            if (!each.isEnabled()) {
-                checked = checked && false;
-            }
-        }
-        if (checked){
-            System.out.println("All checked boxes are checked");
-        }else{
-            System.out.println("one or more of them are unchecked");     }
+        Thread.sleep(2000);
 
         WebElement unCheckAllButton=driver.findElement(By.xpath("//input[@value='Uncheck All']"));
 
@@ -45,6 +35,22 @@ public class P06_SeleniumEasy_CheckboxVerification_2 {
         }else{
             System.out.println(" \" Check All\" button text is \" Check All \" ");
         }
+
+
+        Boolean checked=true;
+        List<WebElement> checkAllButton = driver.findElements(By.xpath("(//div[@class='panel-body'])[3]//input[@type='checkbox']"));
+        for (WebElement each:checkAllButton){
+                System.out.println(each.isSelected());
+                if (!each.isSelected()) {
+                checked = checked && false;
+            }
+        }
+        if (checked){
+            System.out.println("All checked boxes are checked");
+        }else{
+            System.out.println("one or more of them are unchecked");     }
+
+
 
 
 
