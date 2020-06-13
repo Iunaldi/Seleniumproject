@@ -17,7 +17,7 @@ import java.util.List;
 // USE XPATH LOCATOR FOR ALL WEBELEMENT LOCATORS
 // Hint: Need to use findElements method
 
-public class P07_FindElements {
+public class P07_FindElements_Click_50_times {
     public static void main(String[] args) throws InterruptedException{
         WebDriverManager.chromedriver().setup();
         WebDriver driver=new ChromeDriver();
