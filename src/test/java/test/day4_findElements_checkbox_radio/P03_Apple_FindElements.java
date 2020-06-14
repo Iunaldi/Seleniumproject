@@ -3,6 +3,7 @@ package test.day4_findElements_checkbox_radio;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import sun.awt.windows.ThemeReader;
 import utilities.WebDriverFactory;
 
 import java.util.List;
@@ -10,51 +11,58 @@ import java.util.List;
 public class P03_Apple_FindElements {
     public static void main(String[] args) throws InterruptedException {
 
-        /*
-    TC #02: FINDELEMENTS_APPLE
-    1.Open Chrome browser
-    2.Go to https://www.apple.com
-    3.Click to iPhone
-    4.Print out the texts of all links
-    5.Print out how many link is missing text
-    6.Print out how many link has text
-    7.Print out how many total link
-    */
+        //TC #03: FINDELEMENTS_APPLE
+        // 1.Open Chrome browser
+        // 2.Go to https://www.apple.com
+        // 3.Click to all of the headers one by one
+        //     a.Mac, iPad, iPhone, Watch, TV, Music, Support
+        //4.Printout how many links on each pagewiththe titles of the pages
+        //5.Loop through all
+        //6.Print out how many link is missing textTOTAL
+        //7.Print out how many link has textTOTAL
+        //8.Print out how many total linkTOTAL
 
 
         WebDriver driver= WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
         driver.get("https://www.apple.com");
 
-        WebElement linkiPhone=driver.findElement(By.xpath("//a[@href='/iphone/']"));
-        linkiPhone.click();
+        List<WebElement> links =driver.findElements(By.xpath("//ul[@class='ac-gn-list']/li/a"));\
 
-        List<WebElement> AllLinks = driver.findElements(By.xpath("//a"));
-        Thread.sleep((2000));
+        int numOfWithText=0;
+        int numOfWithoutText=0;
 
-        String textofAllLinks;
-        int numOfTextLinks=0;
-        int numOfnonTextLinks=0;
-        for (WebElement each:AllLinks){
-            textofAllLinks=each.getText();
+            for (int i=1;i<8;i++) {
+                links.get(i).click();
+                Thread.sleep(2000);
 
-            if(!textofAllLinks.isEmpty()) {
-                System.out.println(textofAllLinks);
-                numOfTextLinks++;
-            }else{
-                numOfnonTextLinks++;
+                List<WebElement> Textoflinks= driver.findElements(By.xpath("//body//a"));
+
+                System.out.println("Number of links on page"+driver.getTitle() +" "+Textoflinks.size());
+                String text;
+
+
+                for(WebElement each:Textoflinks){
+                    text=each.getText();
+                    if (!text.isEmpty()){
+                        numOfWithText++;
+                    }else{
+                        numOfWithoutText++;
+                    }
+                }
+
+                driver.navigate().back();
+                links=driver.findElements(By.xpath("//ul[@class='ac-gn-list']/li/a"));
+
+
             }
+            System.out.println("Number of links with text: "+numOfWithText);
+            System.out.print("  Number of links with text: "+numOfWithoutText);
+
         }
-        System.out.println("Number of links that has text :"+numOfTextLinks);
-        System.out.println("Number of links that has no text :"+numOfnonTextLinks);
-        System.out.println("Total Number of links :"+AllLinks.size());
-
-
-
-
     }
 
 
 
 
-}
+
