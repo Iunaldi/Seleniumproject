@@ -27,7 +27,7 @@ public class P03_Apple_FindElements {
         driver.manage().window().maximize();
         driver.get("https://www.apple.com");
 
-        List<WebElement> links =driver.findElements(By.xpath("//ul[@class='ac-gn-list']/li/a"));\
+        List<WebElement> links =driver.findElements(By.xpath("//ul[@class='ac-gn-list']/li/a"));
 
         int numOfWithText=0;
         int numOfWithoutText=0;
