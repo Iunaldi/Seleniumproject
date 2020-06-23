@@ -1,9 +1,11 @@
 package test.day7_javafaker_webtables;
 
+import com.sun.org.apache.xpath.internal.operations.Or;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -34,12 +36,12 @@ public class SmartBearTests {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
-    @AfterMethod
+    //@AfterMethod
     public void tearDown(){
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         driver.close();
     }
-    @Test
+
     public void p1_smartbear_login_test(){
         WebElement imputUsername =driver.findElement(By.xpath("//input[@name='ctl00$MainContent$username']"));
         imputUsername.sendKeys("Tester");
@@ -62,5 +64,38 @@ public class SmartBearTests {
         for (WebElement each:allLinks){
             System.out.println(each.getText());
         }
+
+
+    }
+    @Test
+    public void smartbear_login_test() throws InterruptedException {
+        WebElement imputUsername =driver.findElement(By.xpath("//input[@name='ctl00$MainContent$username']"));
+        imputUsername.sendKeys("Tester");
+
+        WebElement imputPassword = driver.findElement(By.xpath("//input[@name='ctl00$MainContent$password']"));
+        imputPassword.sendKeys("test");
+
+        WebElement loginButton=driver.findElement(By.xpath("//input[@name='ctl00$MainContent$login_button']"));
+        loginButton.click();
+
+        WebElement orderLink = driver.findElement(By.xpath("//a[.='Order']"));
+        orderLink.click();
+
+        Select selectProduct = new Select(driver.findElement(By.xpath("//select[id='ctl00_MainContent_fmwOrder_ddlProduct']")));
+        selectProduct.selectByValue("FamilyAlbum");
+
+        WebElement quantityInput = driver.findElement(By.xpath(("//input[@id='ctl00_MainContent_fmwOrder_txtQuantity']")));
+        quantityInput.clear();
+        Thread.sleep(2);
+        quantityInput.sendKeys("2");
+
+
+
+
+
+
+
+
+
     }
 }
