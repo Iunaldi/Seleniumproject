@@ -4,7 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import sun.awt.windows.ThemeReader;
-import utilities.WebDriverFactory;
+import test.utilities.WebDriverFactory;
+
 
 import java.util.List;
 

@@ -3,7 +3,8 @@ package test.day4_findElements_checkbox_radio;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import utilities.WebDriverFactory;
+import test.utilities.WebDriverFactory;
+
 
 public class P05_SeleniumEasy_CheckboxVerification_1 {
     public static void main(String[] args) throws InterruptedException{

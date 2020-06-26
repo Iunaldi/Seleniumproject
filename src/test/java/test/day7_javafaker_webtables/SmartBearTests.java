@@ -10,7 +10,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import test.utilities.SmartBearUtilities;
-import utilities.WebDriverFactory;
+import test.utilities.WebDriverFactory;
+
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -25,7 +26,7 @@ public class SmartBearTests {
         //1. Open browser
         //2. Go to website:
         //http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx
-        driver = utilities.WebDriverFactory.getDriver("chrome");
+        driver = WebDriverFactory.getDriver("chrome");
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

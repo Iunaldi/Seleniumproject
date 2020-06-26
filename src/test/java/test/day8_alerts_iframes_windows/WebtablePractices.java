@@ -1,12 +1,16 @@
 package test.day8_alerts_iframes_windows;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import test.utilities.SmartBearUtilities;
-import utilities.WebDriverFactory;
+import test.utilities.WebDriverFactory;
+
 
 import java.util.concurrent.TimeUnit;
 
-//PRACTICE #4: Method: verifyOrder•Create a method named verifyOrderin SmartBearUtils class.
+//PRACTICE #4: Method: verifyOrder
+// •Create a method named verifyOrderin SmartBearUtils class.
 // •Methodtakes WebDriver object and String(name).
 // •Methodshould verify if given name exists in orders.
 // •This method should simply accepts a name(String), and assert whether given name is in the list or not.
@@ -26,12 +30,18 @@ public class WebtablePractices {
 
     WebDriver driver;
 
+    @BeforeMethod
    public void setUp() {
 
        driver = WebDriverFactory.getDriver("chrome");
        driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
        driver.manage().window().maximize();
        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-       SmartBearUtilities.login(driver);
+
+   }
+    @Test
+   public void nameVerifying(){
+        SmartBearUtilities.login(driver);
+       SmartBearUtilities.verifyOrder(driver,"Charles Dodgeson");
    }
 }
