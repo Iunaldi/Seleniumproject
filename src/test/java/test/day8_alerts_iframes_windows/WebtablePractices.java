@@ -41,7 +41,10 @@ public class WebtablePractices {
    }
     @Test
    public void nameVerifying(){
-        SmartBearUtilities.login(driver);
+       SmartBearUtilities.login(driver);
        SmartBearUtilities.verifyOrder(driver,"Charles Dodgeson");
+       SmartBearUtilities.printNamesAndCitiesin(driver);
    }
+
+
 }
