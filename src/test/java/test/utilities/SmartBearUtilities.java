@@ -74,7 +74,6 @@ public class SmartBearUtilities {
         }
         for (int i = 0; i < listOfName.size(); i++) {
             if (listOfName.get(i).equalsIgnoreCase(name)) {
-
                 driver.findElement(By.xpath("//table[@class='SampleTable']/tbody/tr[" + (i + 2) + "]/td[1]")).click();
             }
         }
