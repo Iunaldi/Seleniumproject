@@ -1,4 +1,4 @@
-package test.utilities;
+package utilities;
 
 //	Task :
 //	- Write a static method in WebDriverFactory class

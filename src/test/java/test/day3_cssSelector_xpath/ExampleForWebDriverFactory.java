@@ -1,7 +1,7 @@
 package test.day3_cssSelector_xpath;
 
 import org.openqa.selenium.WebDriver;
-import test.utilities.WebDriverFactory;
+import utilities.WebDriverFactory;
 
 
 public class ExampleForWebDriverFactory {

@@ -7,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import test.utilities.WebDriverFactory;
+import utilities.WebDriverFactory;
 
 
 import java.util.concurrent.TimeUnit;

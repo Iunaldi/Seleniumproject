@@ -3,8 +3,7 @@ package test.day4_findElements_checkbox_radio;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import sun.awt.windows.ThemeReader;
-import test.utilities.WebDriverFactory;
+import utilities.WebDriverFactory;
 
 
 import java.util.List;

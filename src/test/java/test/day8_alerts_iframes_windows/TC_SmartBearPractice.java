@@ -10,11 +10,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import test.utilities.SmartBearUtilities;
+import utilities.SmartBearUtilities;
 
-import java.sql.Time;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class TC_SmartBearPractice {
@@ -97,9 +94,6 @@ public class TC_SmartBearPractice {
 
     @Test(priority = 4)
     public void delete() {
-        SmartBearUtilities.removeName(driver,"Clare Jefferson");
-
-
-
+        SmartBearUtilities.deleteName(driver,"Clare Jefferson");
     }
 }
