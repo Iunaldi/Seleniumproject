@@ -8,10 +8,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class Driver {
 
     //1-Make constructor private
-    private Driver(){
+     private Driver(){
     }
 
-    private static WebDriver driver;
+    static private WebDriver driver;
+
+     static int num;
 
     public static WebDriver getDriver(){
 

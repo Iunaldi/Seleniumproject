@@ -9,7 +9,6 @@ public class ConfigurationReader {
     //1- we created properties object
     private static Properties properties = new Properties();
 
-
     static {
         //2- get the path and store in String, or directly pass into fileInputStream obj
         String path = "configuration.properties";

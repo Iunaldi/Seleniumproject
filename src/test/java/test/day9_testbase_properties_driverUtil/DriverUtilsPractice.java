@@ -13,6 +13,7 @@ public class DriverUtilsPractice {
     public void driver_practice(){
         Driver.getDriver().get("https://www.google.com");
 
+
         WebElement googleSearch = Driver.getDriver().findElement(By.name("q"));
 
         googleSearch.sendKeys(ConfigurationReader.getProperty("testdata") + Keys.ENTER);
