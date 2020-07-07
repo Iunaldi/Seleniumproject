@@ -16,7 +16,6 @@ public class LoginPage {
     }
 
     //locating username input box
-
     @FindBy(id = "prependedInput")
     public WebElement usernameInput;
 
@@ -31,6 +30,12 @@ public class LoginPage {
     //locating error message
     @FindBy(xpath = "//div[@class='alert alert-error']")
     public WebElement errorMessage;
+
+    //locating forgot your password link
+    @FindBy(linkText = "Forgot your password?")
+    public WebElement forgotPasswordLink;
+
+
 
     public void login(String username, String password){
 

@@ -94,14 +94,6 @@ public class Test_US_2 {
         driver.findElement(By.xpath("//div[@class='form-actions widget-actions']//button[@class='btn btn-primary']")).click();
 
 
-
-
-
-
-
-
-
-
     }
 
 
