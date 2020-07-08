@@ -7,13 +7,16 @@ import utilities.Driver;
 
 public class Loading7Page {
 
+
     public Loading7Page(){
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(), this);
     }
+
 
     @FindBy(xpath = "//strong")
     public WebElement doneMessage;
 
     @FindBy(xpath = "//img[@class='rounded mx-auto d-block']")
     public WebElement spongeBobImage;
+
 }

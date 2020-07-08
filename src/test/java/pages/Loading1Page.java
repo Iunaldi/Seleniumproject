@@ -14,21 +14,20 @@ public class Loading1Page {
     @FindBy(xpath = "//button[.='Start']")
     public WebElement startButton;
 
-    @FindBy(id="username")
+    @FindBy(id = "username")
     public WebElement usernameInput;
 
-    @FindBy(id="pwd")
+    @FindBy(id = "pwd")
     public WebElement passwordInput;
 
     @FindBy(xpath = "//button[.='Submit']")
     public WebElement submitButton;
 
-    @FindBy(id="loading")
-    public WebElement loadingImg;
+    @FindBy(id = "loading")
+    public WebElement loadingBar;
 
     @FindBy(id = "flash")
     public WebElement errorMessage;
-
 
 
 
