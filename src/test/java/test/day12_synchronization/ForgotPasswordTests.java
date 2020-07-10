@@ -5,9 +5,6 @@ import org.testng.annotations.Test;
 import pages.ForgotPasswordPage;
 import pages.LoginPage;
 import utilities.ConfigurationReader;
-import utilities.Driver;
-
-import java.util.concurrent.TimeUnit;
 
 public class ForgotPasswordTests {
 

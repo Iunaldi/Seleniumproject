@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
-import utilities.Driver;
 
 public class TC35_Vytrack {
     //TC#35: Vytrack forgot password page verificationsàTITLE andURL

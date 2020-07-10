@@ -4,7 +4,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import utilities.ConfigurationReader;
-import utilities.Driver;
 
 public class PositiveLoginTests {
 

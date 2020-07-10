@@ -4,7 +4,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HoversPage;
-import utilities.Driver;
 
 public class ActionsPracticesWithPageObj {
 

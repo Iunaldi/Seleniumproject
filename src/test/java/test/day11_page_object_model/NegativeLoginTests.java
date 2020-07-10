@@ -7,7 +7,6 @@ import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import utilities.ConfigurationReader;
-import utilities.Driver;
 
 public class NegativeLoginTests {
 

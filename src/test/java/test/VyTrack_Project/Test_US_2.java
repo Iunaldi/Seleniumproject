@@ -6,7 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.ConfigurationReader;
-import utilities.Driver;
+
 import java.util.concurrent.TimeUnit;
 
 public class Test_US_2 {

@@ -6,7 +6,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.Loading1Page;
 import pages.Loading7Page;
-import utilities.Driver;
 
 public class ExplicitWaitPractices {
 

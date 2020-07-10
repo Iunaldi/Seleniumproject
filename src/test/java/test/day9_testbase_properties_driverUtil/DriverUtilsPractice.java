@@ -5,7 +5,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import utilities.ConfigurationReader;
-import utilities.Driver;
 
 public class DriverUtilsPractice {
 
